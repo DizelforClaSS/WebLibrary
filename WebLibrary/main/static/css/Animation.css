@@ -1,0 +1,49 @@
+.nameOfSmth {
+  width:16ch;
+  color: black;
+  font-family: monospace;
+  font-size: 3vw;
+  white-space: nowrap; /* не переносить текст на другую строку */
+  border-right: 2px solid rgba(0,0,0,.75);
+  overflow: hidden; /* скрываем переполнение контентом */
+  animation: printed_text 5s steps(16), /*Какая Анимация за какое время и за сколько шагов */
+  blinkTextCursor 500ms steps(44) infinite normal;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+@keyframes printed_text {
+  from {
+    width: 0;
+  }
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(0,0,0,.75);}
+  to{border-right-color: transparent;}
+}
+
+.nameOfSmth2 {
+  width:26ch;
+  color: black;
+  font-family: monospace;
+  font-size: 3vw;
+  white-space: nowrap; /* не переносить текст на другую строку */
+  border-right: 2px solid rgba(0,0,0,.75);
+  overflow: hidden; /* скрываем переполнение контентом */
+  animation: printed_text 5s steps(26), /*Какая Анимация за какое время и за сколько шагов */
+  blinkTextCursor 500ms steps(44) infinite normal;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+@keyframes printed_text {
+  from {
+    width: 0;
+  }
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(0,0,0,.75);}
+  to{border-right-color: transparent;}
+}

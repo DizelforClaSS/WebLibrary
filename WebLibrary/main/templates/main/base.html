@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>World of books</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/Animation.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/Authorization.css' %}" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <header>
+      <div class="logo">
+       <a href="/"><img class= "graficlogo" src="{% static 'img/Лого.png' %}">
+       </a>
+      </div>
+    </header>
+
+    <nav id="MyNav">
+        <div class="topnav" id="navigate">
+          <a href="http://127.0.0.1:8000">Домой</a>
+          <a href="#">Книги</a>
+          <a href="#">Учебники</a>
+          <a href="#">Журналы</a>
+          <a href="/audio">Аудиокниги</a>
+          <a href="/user">Мой профиль</a>
+          <a id="menu" href="#" class="icon">&#9776;</a>
+        </div>
+    </nav>
+     <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+  {% block content %}
+  {% endblock %}
+    <script defer src="{% static 'js/script.js' %}"></script>
+    <script defer src="{% static 'js/Autorization.js' %}"></script>
+  </body>
+</html>

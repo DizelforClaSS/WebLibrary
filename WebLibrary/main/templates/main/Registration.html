@@ -1,0 +1,56 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+    <div class="container">
+     <form name='registration'  class="form" method="post">
+         {% csrf_token %}
+        <div class="form-control">
+          <label for="Firstname">Имя: </label>
+          <!-- <input type = "text"  id = "fname" placeholder =  "Введите имя" aria-required="true">-->
+            {{form.name}}
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error messeage</small>
+        </div>
+
+         <div class="form-control">
+          <label for="LastName">Фамилия: </label>
+          <!--  <input type = "text"  id = "LastName" placeholder =  "Введите фамилию" aria-required="true">  -->
+             {{form.surname}}
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error messeage</small>
+      </div>
+
+      <div class="form-control">
+          <label for="Email">Почта: </label>
+          <!-- <input type = "email"  id = "email" placeholder =  "Введите почту" aria-required="true"> -->
+          {{form.email}}
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error messeage</small>
+      </div>
+
+      <div class="form-control">
+          <label for="Password">Пароль: </label>
+          <!-- <input type = "password"  id = "password" placeholder =  "Введите пароль" aria-required="true"> -->
+          {{form.password}}
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error messeage</small>
+      </div>
+
+       <div class="form-control">
+          <label for="Password2">Повторите пароль: </label>
+         <!-- <input type = "password"  id = "password2" placeholder =  "Введите пароль" aria-required="true"> -->
+           {{form.reppassword}}
+          <i class="fa fa-check-circle"></i>
+          <i class="fa fa-exclamation-circle"></i>
+          <small>Error messeage</small>
+      </div>
+     <!--<button onclick="checkInputs()">Отправить</button>-->
+         <span>{{error}}</span>
+     <input type='submit' class='validateBtn' value='Отправить'/>
+		</form></div>
+{% endblock %}

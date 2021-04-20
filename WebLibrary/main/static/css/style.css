@@ -1,0 +1,268 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  font-family: 'Balsamiq Sans', cursive;
+  background-size: 100px;
+  font-size: 15px;
+  position: relative;
+  display: flex;
+}
+.logo{
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.graficlogo{
+  padding: 5px;
+  max-width: 100%;
+  box-sizing: border-box; /*Меняет расчет границ */
+}
+
+.main-information{
+  margin: 5px;
+  border-bottom: 3px solid black;
+}
+a{
+  text-decoration: none;
+}
+li{
+  text-decoration: none;
+  list-style: none;
+}
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+body{
+  font-family: 'Balsamiq Sans', cursive;
+  background-color: #ecd083;
+}
+
+nav{
+ top:0.5px;
+ width: 900px;
+
+ margin: auto;
+
+ border-bottom: 3px solid black;
+
+
+}
+
+.topnav{
+  font-size: 15px;
+  margin-top:30px;
+
+}
+
+.topnav a{
+  color: #000;
+  text-align: center;
+  padding: 5px 5px;
+  font-size: 30px;
+}
+.books a{
+  color: #000;
+  text-align: center;
+  padding: 5px 5px;
+  font-size: 15px;
+}
+.topnav a:hover{
+  border-bottom: 2px solid #000;
+}
+
+.topnav .icon{
+  display: none;
+}
+.main-information{
+  margin: auto;
+  font-size: 15px;
+  text-align: center;
+  padding: 10px;
+}
+@media screen and (max-width:450px){
+  .main-information h1{
+        font-size: 7vw;
+  }
+  .main-information h3{
+        font-size: 4vw;
+  }
+}
+@media screen and (max-width:880px){
+  .topnav a:not(:first-child){
+    display:none;
+  }
+  .topnav a.icon{
+    float: right;
+    margin-top: -17px;
+    display: block;
+    color: black;
+  }
+  nav{
+    width: 100%;
+    height: 50px;
+  }
+  nav.resp{
+    width: 100%;
+    height: 300px;
+  }
+  .f-nav{ z-index: 9999; position: fixed; left: 0; top: 0; width: 100%;}
+
+
+  .topnav.responsive{
+    position: relative;
+
+  }
+  .topnav.responsive a.icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+
+  }
+  .topnav.responsive a{
+    float: none;
+    display: block;
+    text-align: center;
+
+  }
+
+}
+
+.main-gallery{
+  display: block;
+  background-color: rgb(236, 208, 131);
+  font-size: 15px;
+}
+.books{
+  display: flex;
+  flex-wrap: wrap;
+}
+.books figure{
+  width: 150px;
+  padding: 5px;
+  margin: 5px;
+  flex:auto;
+}
+
+figure img{
+  width: 100%;
+  height: auto;
+}
+.books figcaption{
+  text-align: center;
+  font-size: 15px;
+
+}
+.books a:hover{
+  color: rgb(23, 174, 141)
+}
+@media screen and (min-width: 600px){
+  .books figure{
+    width: 0px;
+  }
+}
+@media (min-width: 200px) and (max-width: 330px){
+  .books figure{
+    width: 50px;
+  }
+  .books figcaption{
+    font-size: 8px;
+  }
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background:rgb(197, 145, 49);
+    color: black; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+
+}
+.Author-pic{
+  align-self: right;
+  width: 25%;
+  height: auto;
+  padding: 30px;
+  padding-bottom: 5px;
+  margin: 30px;
+  font-family: 'Prata', serif;
+
+}
+.author-bio{
+  font-family: 'Prata', serif;
+  align-content: left;
+  color: black;
+}
+.author-bio a:hover{
+  color: rgb(23, 174, 141);
+
+}
+.author-bio a{
+  color: #000;
+  font-size: 4vw;
+}
+.poems{
+  font-family: 'Prata', serif;
+  font-size: 3vw;
+  padding: 30px;
+  padding-left: 50px;
+  margin: 30px;
+
+}
+/* .poem{
+  font-family: 'Prata', serif;
+  font-size: 1.5vw;
+  padding: 30px;
+  padding-left: 50px;
+  margin: 30px;
+  white-space: pre-wrap;
+} */
+
+.poem {
+  padding-left:5%;
+  width: 29ch;
+  color: black;
+  font-family: monospace;
+  font-size: 2vw;
+  white-space:pre-wrap; /* не переносить текст на другую строку */
+
+}
+
+
+.poems li{
+  list-style: decimal;
+}
+
+.poems a{
+  color: #000;
+}
+.poems a:hover{
+  color: rgb(23, 174, 141)
+}
+.video-poem{
+ width: 50%;
+ height: 25vw;
+ padding-right: 5px;
+}
+
+/* Анимация печатающегося текста */
+
